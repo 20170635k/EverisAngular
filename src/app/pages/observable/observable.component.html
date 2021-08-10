@@ -1,0 +1,10 @@
+<div *ngIf="tiempo<10;else mayores">menor que 10 .!!
+  <ul>
+    <li *ngFor="let item of items">item: {{item}}</li>
+  </ul>
+</div>
+<ng-template #mayores>mayor que 10 .!!
+  <ul>
+    <li *ngFor="let item of items">item: {{item}}</li>
+  </ul>
+</ng-template>

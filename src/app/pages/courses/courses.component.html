@@ -1,0 +1,3 @@
+<div class="container">
+  <app-course (onCourseClick)="showcardpressed($event)" *ngFor="let course of courses; let index = index" [number]="index" [title]="course.title"></app-course>
+</div>

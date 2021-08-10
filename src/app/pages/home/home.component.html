@@ -1,0 +1,24 @@
+<mat-card class="example-card">
+<form >
+  <label for="name">Nombre : </label>
+  <input type="text" [(ngModel)]="name" name="name" id="name">
+  <label for="surname">Apellido: </label>
+  <input type="text" [(ngModel)]="surname" name="surname" id="surname">
+
+</form>
+
+<h1>Styles</h1>
+
+<h4>Styles String</h4>
+<button mat-raised-button color="accent">Green</button>
+<button mat-raised-button color="warn">Red</button>
+<div [ngClass]="currentstring" class="resultado">Nombre: {{name}} , Apellidos: {{surname}}</div>
+
+<h4>Styles Object</h4>
+<button [ngStyle]="especialstylecolor" (click)="changebcolor()">{{this.bcolor?"normal":"red"}}</button>
+<button [ngStyle]="especialstylefamily" (click)="changebfamily()">{{this.bfamily?"normal":"italic"}}</button>
+<button [ngStyle]="especialstylestyle" (click)="changebstyle()">{{this.bstyle?"normal":"bold"}}</button>
+<div [(ngClass)]="currentobject" class="resultado">Nombre: {{name}} , Apellidos: {{surname}}</div>
+
+
+</mat-card>
